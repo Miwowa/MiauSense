@@ -63,7 +63,7 @@ local ThemeManager = {} do
         end
     end
     function ThemeManager:CreateThemeManager(groupbox)
-        groupbox:AddLabel('Accent color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor })
+        groupbox:AddLabel('Main Color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor })
         self.Library.Options.AccentColor:OnChanged(function()
             self.Library.AccentColor = self.Library.Options.AccentColor.Value
             self:ThemeUpdate()
