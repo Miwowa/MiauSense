@@ -1,4 +1,5 @@
 --\\ not my code
+--\\ github is delayed with updates so im adding numebrs to make sure the raw file changed 234
 local cloneref = (cloneref or clonereference or function(instance: any) return instance end)
 local httpService = cloneref(game:GetService('HttpService'))
 local httprequest = (syn and syn.request) or request or http_request or (http and http.request)
@@ -31,7 +32,7 @@ local ThemeManager = {} do
 
     function ThemeManager:CreateThemeManager(groupbox)
         if not self.Library.Options.AccentColor then
-            groupbox:AddLabel('Accent color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor })
+            groupbox:AddLabel('Main Color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor })
             self.Library.Options.AccentColor:OnChanged(function()
                 self.Library.AccentColor = self.Library.Options.AccentColor.Value
                 self:ThemeUpdate()
